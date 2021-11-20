@@ -8,7 +8,7 @@ import { Consts } from '../definitions/Consts'
 import { OutputError } from '../definitions/OutputError'
 
 faker.seed(123)
-const TAX_FILE = 'src/jest/test-files/Skattekonto.txt'
+const TAX_FILE = `packages/backend/src/jest/test-data/Skattekonto.txt`
 
 function fakerParserOption(): ParserMulti.Option {
   return {
@@ -493,7 +493,7 @@ describe('Parser Multi #cold #entity', () => {
     expect.assertions(2)
     try {
       parser.parse(text)
-    } catch (exception) {
+    } catch (exception: any) {
       expect(exception).toBeInstanceOf(OutputError)
       expect(exception.errors).toStrictEqual([{ type: OutputError.Types.currencyCodeInvalid, data: 'XTT' }])
     }

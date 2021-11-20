@@ -24,6 +24,9 @@
       "git add"
     ]
   },
+  "scripts": {
+    "test": "lerna run test"
+  },
   "private": "true",
   "workspaces": {
     "packages": [

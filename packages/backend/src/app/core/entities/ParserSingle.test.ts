@@ -7,7 +7,7 @@ import { Parser } from './Parser'
 import faker from 'faker'
 
 faker.seed(123)
-const GOOGLE_INVOICE_FILE = 'src/jest/test-files/google-invoice.txt'
+const GOOGLE_INVOICE_FILE = 'packages/backend/src/jest/test-data/Google-invoice.txt'
 
 function getStringFromFile(filepath: string): string {
   return readFileSync(filepath, 'utf8')
@@ -98,7 +98,7 @@ describe('ParserSingle #cold #entity', () => {
 
     try {
       parser.parse(text)
-    } catch (exception) {
+    } catch (exception: any) {
       expect(exception).toBeInstanceOf(OutputError)
 
       const errors: OutputError.Info[] = [
@@ -149,7 +149,7 @@ describe('ParserSingle #cold #entity', () => {
     try {
       text = 'Date: 2020-01-1; Code: SEK; Amount: 123;'
       parser.parse(text)
-    } catch (exception) {
+    } catch (exception: any) {
       expect(exception.errors).toStrictEqual([
         {
           type: OutputError.Types.parserPatternNotFound,
@@ -162,7 +162,7 @@ describe('ParserSingle #cold #entity', () => {
     try {
       text = 'Date: 2020-01-01; Code: SEK; Amount: 15Euu;'
       parser.parse(text)
-    } catch (exception) {
+    } catch (exception: any) {
       expect(exception.errors).toStrictEqual([
         {
           type: OutputError.Types.parserPatternNotFound,
@@ -175,7 +175,7 @@ describe('ParserSingle #cold #entity', () => {
     try {
       text = 'Date: 2020-01-01; Code: XTTe; Amount: 123;'
       parser.parse(text)
-    } catch (exception) {
+    } catch (exception: any) {
       expect(exception.errors).toStrictEqual([
         {
           type: OutputError.Types.parserPatternNotFound,
@@ -188,7 +188,7 @@ describe('ParserSingle #cold #entity', () => {
     try {
       text = 'Date: 2020-01-0; Code: XTTe; Amount: ..;'
       parser.parse(text)
-    } catch (exception) {
+    } catch (exception: any) {
       const validErrors = [
         {
           type: OutputError.Types.parserPatternNotFound,
@@ -212,7 +212,7 @@ describe('ParserSingle #cold #entity', () => {
     try {
       text = 'Date: 2020-01-01; Code: XTT; Amount: 123;'
       parser.parse(text)
-    } catch (exception) {
+    } catch (exception: any) {
       expect(exception.errors).toStrictEqual([
         {
           type: OutputError.Types.parserCurrencyCodeInvalid,

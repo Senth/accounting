@@ -13,10 +13,6 @@
 /build
 /dist
 
-# development
-/dev/mongodb/*
-!/dev/mongodb/.gitkeep
-
 # misc
 .DS_Store
 .env

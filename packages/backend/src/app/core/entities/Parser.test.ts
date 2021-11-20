@@ -189,7 +189,7 @@ describe('Parser #cold #entity', () => {
 			const dateTest = dateTemplate.replace('{}', month.invalid)
 			try {
 				ParserImpl.testFixDate(dateTest)
-			} catch (exception) {
+			} catch (exception: any) {
 				expect(exception.errors).toMatchObject([{ type: OutputError.Types.parserDateInputInvalid }])
 			}
 		}

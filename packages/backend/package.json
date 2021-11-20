@@ -1,13 +1,13 @@
 {
   "name": "@senth/accounting-backend",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Backend for the accounting system",
   "main": "src/index.ts",
   "scripts": {
     "start": "node dist/index.js",
     "dev": "ts-node-dev src",
     "build": "tsc -p .",
-    "test": "npx jest",
+    "test": "npx jest -",
     "coverage": "jest --coverage --silent",
     "clear-jest": "jest --clearCache",
     "mongod": "mongod --dbpath dev/mongodb --port 27018"
