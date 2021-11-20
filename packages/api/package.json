@@ -1,0 +1,8 @@
+{
+  "name": "@senth/accounting-api",
+  "version": "0.1.0",
+  "description": "API for the backend",
+  "main": "index.ts",
+  "license": "MIT",
+  "private": true
+}

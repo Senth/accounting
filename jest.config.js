@@ -1,10 +1,4 @@
 module.exports = {
-	preset: 'ts-jest/presets/js-with-babel',
-	testEnvironment: 'node',
-	roots: ['./src'],
-	globals: {
-		'ts-jest': {
-			babelConfig: true,
-		},
-	},
+  projects: ['<rootDir>/packages/backend/jest.config.js', '<rootDir>/packages/web/jest.config.js'],
+  moduleFileExtensions: ['js', 'ts', 'tsx'],
 }
