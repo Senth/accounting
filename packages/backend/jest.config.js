@@ -1,10 +1,5 @@
+/** @type {import('ts-jest/dist/types').InitialOptionsTsJest} */
 module.exports = {
-	preset: 'ts-jest/presets/js-with-babel',
-	testEnvironment: 'node',
-	roots: ['./src'],
-	globals: {
-		'ts-jest': {
-			babelConfig: true,
-		},
-	},
+  preset: 'ts-jest',
+  testEnvironment: 'node',
 }

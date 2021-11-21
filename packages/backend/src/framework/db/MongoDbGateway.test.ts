@@ -24,7 +24,7 @@ describe('MongoDBGateway testing connection to the DB #db', () => {
 
   beforeAll(async () => {
     gateway = new MongoDbGateway()
-    const connectedPromise = MongoClient.connect(config.mongoDb.url(), { useUnifiedTopology: true })
+    const connectedPromise = MongoClient.connect(config.mongoDb.url())
       .then((mongoClient) => {
         client = mongoClient
         db = client.db(config.mongoDb.database)
@@ -41,7 +41,9 @@ describe('MongoDBGateway testing connection to the DB #db', () => {
   })
 
   afterAll(async () => {
-    await client.close()
+    if (client) {
+      await client.close()
+    }
   })
 
   it('Test connection', async () => {
@@ -62,9 +64,12 @@ describe('MongoDBGateway testing connection to the DB #db', () => {
     user.id = savedUser.id
     expect(savedUser).toStrictEqual(user)
 
-    const object = await db.collection(Collections.User).findOne({ _id: new ObjectId(savedUser.id) })
-    const dbUser = MongoConverter.toUser(object)
-    expect(dbUser).toStrictEqual(savedUser)
+    const object: any = await db.collection(Collections.User).findOne({ _id: new ObjectId(savedUser.id) })
+    expect(object).not.toBeNull()
+    if (object !== null) {
+      const dbUser = MongoConverter.toUser(object)
+      expect(dbUser).toStrictEqual(savedUser)
+    }
   })
 
   it('saveVerification() full', async () => {
@@ -77,7 +82,7 @@ describe('MongoDBGateway testing connection to the DB #db', () => {
       .then((verification) => {
         return db.collection(Collections.Verification).findOne({ _id: new ObjectId(verification.id) })
       })
-      .then((object) => {
+      .then((object: any) => {
         const dbVerification = MongoConverter.toVerification(object)
         verification.id = dbVerification.id
         expect(dbVerification).toEqual(verification)
@@ -93,7 +98,7 @@ describe('MongoDBGateway testing connection to the DB #db', () => {
       .then((verification) => {
         return db.collection(Collections.Verification).findOne({ _id: new ObjectId(verification.id) })
       })
-      .then((object) => {
+      .then((object: any) => {
         const dbVerification = MongoConverter.toVerification(object)
         verification.id = dbVerification.id
         expect(dbVerification).toEqual(verification)
@@ -109,7 +114,7 @@ describe('MongoDBGateway testing connection to the DB #db', () => {
       .then((verification) => {
         return db.collection(Collections.Verification).findOne({ _id: new ObjectId(verification.id) })
       })
-      .then((object) => {
+      .then((object: any) => {
         const option: Verification.Option = MongoConverter.toOption(object)
         verification.id = option.id
         const dbVerification = new Verification(option)
@@ -122,7 +127,7 @@ describe('MongoDBGateway testing connection to the DB #db', () => {
       .then((verification) => {
         return db.collection(Collections.Verification).findOne({ _id: new ObjectId(verification.id) })
       })
-      .then((object) => {
+      .then((object: any) => {
         const dbVerification = MongoConverter.toVerification(object)
         expect(dbVerification).toEqual(verification)
       })
@@ -341,7 +346,7 @@ describe('MongoDBGateway testing connection to the DB #db', () => {
       .then((parser) => {
         return db.collection(Collections.Parser).findOne({ _id: new ObjectId(parser.id) })
       })
-      .then((object) => {
+      .then((object: any) => {
         const dbParser = MongoConverter.toParser(object)
         expect(dbParser).toEqual(parser)
       })
@@ -356,7 +361,7 @@ describe('MongoDBGateway testing connection to the DB #db', () => {
       .then((parser) => {
         return db.collection(Collections.Parser).findOne({ _id: new ObjectId(parser.id) })
       })
-      .then((object) => {
+      .then((object: any) => {
         const dbParser = MongoConverter.toParser(object)
         expect(dbParser).toEqual(parser)
       })
