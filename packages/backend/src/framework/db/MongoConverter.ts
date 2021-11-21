@@ -99,7 +99,7 @@ export namespace MongoConverter {
    * @return the deserialized object into an entity option
    * @throws {InternalError.Types.dbError} if the object is empty
    */
-  export function toOption(object: Document): any {
+  export function toOption(object: any): any {
     if (!object || Object.keys(object).length === 0) {
       throw new InternalError(InternalError.Types.dbError, 'toEntity() empty object')
     }

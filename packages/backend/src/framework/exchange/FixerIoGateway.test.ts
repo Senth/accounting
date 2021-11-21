@@ -1,7 +1,7 @@
 import { FixerIoGateway } from './FixerIoGateway'
 import { Currency } from '../../app/core/entities/Currency'
 
-describe('FixerIoGateway #limit #api-call', () => {
+describe.skip('FixerIoGateway #limit #api-call', () => {
   let gateway: FixerIoGateway
 
   beforeAll(() => {
