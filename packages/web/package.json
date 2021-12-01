@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@senth/accounting-api": "^0.1.0",
-    "@testing-library/jest-dom": "5.15.0",
+    "@testing-library/jest-dom": "5.15.1",
     "@testing-library/react": "12.1.2",
     "@testing-library/user-event": "13.5.0",
     "axios": "0.24.0",
@@ -41,7 +41,7 @@
     ]
   },
   "devDependencies": {
-    "@testing-library/jest-dom": "5.15.0",
+    "@testing-library/jest-dom": "5.15.1",
     "@testing-library/react": "12.1.2",
     "@testing-library/user-event": "13.5.0"
   }
