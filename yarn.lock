@@ -3743,7 +3743,7 @@ __metadata:
     "@senth/accounting-api": ^0.1.0
     "@types/cors": 2.8.12
     "@types/express": 4.17.13
-    "@types/express-fileupload": 1.2.0
+    "@types/express-fileupload": 1.2.2
     "@types/faker": 5.5.9
     "@types/fs-extra": 9.0.13
     "@types/pdf-parse": 1.1.1
@@ -4113,12 +4113,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/busboy@npm:*":
-  version: 0.3.1
-  resolution: "@types/busboy@npm:0.3.1"
+"@types/busboy@npm:^0":
+  version: 0.3.2
+  resolution: "@types/busboy@npm:0.3.2"
   dependencies:
     "@types/node": "*"
-  checksum: 992a8a5881d557e2c4727acf71528d8a58a52119644ba1419c1e802238e7b88b4f8cc60611dc8cebd9a1bbfd08fac6064681a392656069867f9b3d305c62403d
+  checksum: dd8cbd214c24966f3a91c37eca04bbcf6bdd027db352b823a8fb57a486703d8f5e59958a55c4f1e01db10c2d4535bda58dd92bf1fe56b3bd7b08ecb078bd6ec6
   languageName: node
   linkType: hard
 
@@ -4162,13 +4162,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/express-fileupload@npm:1.2.0":
-  version: 1.2.0
-  resolution: "@types/express-fileupload@npm:1.2.0"
+"@types/express-fileupload@npm:1.2.2":
+  version: 1.2.2
+  resolution: "@types/express-fileupload@npm:1.2.2"
   dependencies:
-    "@types/busboy": "*"
+    "@types/busboy": ^0
     "@types/express": "*"
-  checksum: ed5fe51101e98a4e177905bd7469d0ed30581e83b13ab01f2fcd7bef809bd5df638124fac59806b8b14e2cbd42e8fb0fbed4bee7471b3609b0c2c0efa514f6d3
+  checksum: a4ab173f84379757efd8ea7dcfce57003d5beb8982a231585c567ff37805bab7d4f7930188ce5ed8872c770f3e294d1c574116748b0cf159789107a654342978
   languageName: node
   linkType: hard
 
