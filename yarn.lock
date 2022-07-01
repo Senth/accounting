@@ -4335,10 +4335,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:16.11.38":
-  version: 16.11.38
-  resolution: "@types/node@npm:16.11.38"
-  checksum: 471df020162098602fd77014c458e84f01f7faff3cddcc2b7739312a8b4f103bc0fab3dfc03641233d9f627c47fd82dfabc9b86413ef680e193c36b9aed322e6
+"@types/node@npm:16.11.42":
+  version: 16.11.42
+  resolution: "@types/node@npm:16.11.42"
+  checksum: a1746910cf27c9e8597805556c943bde5e630c5c4e03bdd2513ccd7fe5fce1ed912f51f5d0ce5dcda0583e5539177f76ad35a19caa9525307d7a722aa9962631
   languageName: node
   linkType: hard
 
@@ -5056,7 +5056,7 @@ __metadata:
     "@babel/core": 7.16.12
     "@types/faker": 5.5.9
     "@types/jest": 27.0.3
-    "@types/node": 16.11.38
+    "@types/node": 16.11.42
     "@types/uuid": 8.3.4
     "@typescript-eslint/experimental-utils": 5.4.0
     eslint: 8.3.0
