@@ -3743,7 +3743,7 @@ __metadata:
     "@senth/accounting-api": ^0.1.0
     "@types/cors": 2.8.12
     "@types/express": 4.17.13
-    "@types/express-fileupload": 1.2.2
+    "@types/express-fileupload": 1.2.3
     "@types/faker": 5.5.9
     "@types/fs-extra": 9.0.13
     "@types/pdf-parse": 1.1.1
@@ -4163,13 +4163,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/express-fileupload@npm:1.2.2":
-  version: 1.2.2
-  resolution: "@types/express-fileupload@npm:1.2.2"
+"@types/express-fileupload@npm:1.2.3":
+  version: 1.2.3
+  resolution: "@types/express-fileupload@npm:1.2.3"
   dependencies:
     "@types/busboy": ^0
     "@types/express": "*"
-  checksum: a4ab173f84379757efd8ea7dcfce57003d5beb8982a231585c567ff37805bab7d4f7930188ce5ed8872c770f3e294d1c574116748b0cf159789107a654342978
+  checksum: 91fbb58fbb9e83d8dc2a4b702643ad06482a48109f4c422246e1287a6ef6d1cfbe20909c78886ae220ec060a3d9a01f5b33dc892aaefadc36472ba6a37b01bb5
   languageName: node
   linkType: hard
 
