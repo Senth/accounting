@@ -43,7 +43,7 @@
     "eslint-plugin-jest": "25.2.4",
     "faker": "5.5.3",
     "jest": "27.4.2",
-    "jest-mock-extended": "2.0.6",
+    "jest-mock-extended": "2.0.7",
     "lerna": "4.0.0",
     "ts-jest": "27.0.7",
     "ts-node": "10.4.0",
