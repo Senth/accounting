@@ -5041,7 +5041,7 @@ __metadata:
     eslint-plugin-jest: 25.2.4
     faker: 5.5.3
     jest: 27.4.2
-    jest-mock-extended: 2.0.7
+    jest-mock-extended: 2.0.9
     lerna: 4.0.0
     ts-jest: 27.0.7
     ts-node: 10.4.0
@@ -12196,15 +12196,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jest-mock-extended@npm:2.0.7":
-  version: 2.0.7
-  resolution: "jest-mock-extended@npm:2.0.7"
+"jest-mock-extended@npm:2.0.9":
+  version: 2.0.9
+  resolution: "jest-mock-extended@npm:2.0.9"
   dependencies:
     ts-essentials: ^7.0.3
   peerDependencies:
-    jest: ^24.0.0 || ^25.0.0 || ^26.0.0 || ^27.0.0 || ^28.0.0
+    jest: ^24.0.0 || ^25.0.0 || ^26.0.0 || ^27.0.0 || ^28.0.0 || ^29.0.0
     typescript: ^3.0.0 || ^4.0.0
-  checksum: e9928f1c1e4c9d1bb9746e0f0791e7b0c5b91474d10ed07c6f59e80294830b46b9f6f99b418e4ebcb3641db7957f2014317ab4267e56b676789f7013db72aa8e
+  checksum: 338d556e3c6e25cffb99168bc5a0d4d9dce15e06ccc33dbcb0f4b9e52a452e684337ab42be880b98a6e555fc57f26fb9b02621ab160ac526c3a91b908fe0f82a
   languageName: node
   linkType: hard
 
